@@ -5,35 +5,688 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Kaushan+Script&family=Lobster+Two&family=Outfit:wght@100&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="all.min.css">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .first_one {
+            width: 100%;
+            /* border: 2px solid grey; */
+            height: 60px;
+            position: relative;
+            top: 0%;
+        }
+
+        .header {
+            display: flex;
+            /* border: 2px solid grey; */
+            max-width: 100%;
+            height: 60px;
+            justify-content: space-between;
+            position: relative;
+            position: sticky;
+            top: 0%;
+        }
+
+        .header div {
+            animation: up 2s 1;
+            flex-basis: 10%;
+        }
+
+        /* @keyframes up {
+            from {
+                margin-top: -3%;
+            }
+            
+            to {
+                margin-top: 2%;
+            }
+        } */
+
+        .header .logo {
+            /*  border: 2px solid green; */
+            margin-top: 0px;
+        }
+
+
+        .header .search {
+            /* border: 2px solid red; */
+            flex-basis: 60%;
+        }
+
+        .header .search #search_ {
+            width: 70%;
+            padding: 5px;
+            margin-top: 10px;
+            border: 1px solid #1f1f1f;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px grey, -1px -1px 1px grey;
+        }
+
+        .header .search #button {
+            width: 15%;
+            /* border: 2px solid gold; */
+            padding: 5px;
+            margin-top: 10px;
+            /* background-color: #FBFBF2; */
+            border-radius: 10px;
+            color: #242423;
+            text-align: center;
+            margin-left: 2px;
+
+        }
+
+        .header .menu {
+            /* border: 2px solid tomato; */
+            position: relative;
+
+        }
+
+        .header .menu #hello {
+            padding: 10px;
+            float: right;
+            position: relative;
+
+        }
+
+        .header .menu .list {
+            max-width: 200px;
+            margin-right: 2px;
+            display: none;
+        }
+
+        .header .menu .list ul {
+            /* border: 2px solid tomato; */
+            margin-top: 30px;
+            list-style-type: none;
+            text-align: right;
+            margin-left: -30px;
+
+        }
+
+        .header .menu .list ul li {
+            border: 2px solid grey;
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+            margin-left: -30px;
+            border-radius: 10px;
+        }
+
+        .header .menu .list ul li a {
+            text-align: center;
+            text-decoration: none;
+            text-align: center;
+            color: #1f1f1f;
+        }
+
+        .menu:hover .list {
+            display: block;
+        }
+
+        .middle {
+            clear: both;
+            position: relative;
+            display: flex;
+            margin: auto;
+            max-width: 55%;
+            /* border: 2px solid green; */
+            height: 300px;
+            margin-top: 20px;
+
+
+        }
+
+        .middle .main {
+            margin-top: 20px;
+            width: 100%;
+            position: relative;
+            height: 200px;
+            margin-top: 50px;
+
+        }
+
+        .middle .main img {
+            float: left;
+        }
+
+        .middle div {
+            animation: up 2s 1;
+        }
+
+        .middle .main .introduce {
+            margin-top: 0%;
+            /* border: 2px solid blue; */
+            height: 50px;
+            z-index: -1;
+        }
+
+        .middle .main .introduce p {
+            /* border: 2px solid gold; */
+            text-align: center;
+            word-spacing: 5px;
+            font-family: 'EB Garamond', serif;
+            font-size: 29px;
+            padding: 10px;
+            padding-left: 0%;
+            margin-top: 0%;
+
+        }
+
+        .middle .main .first_name {
+            position: relative;
+            margin-top: 0%;
+            width: 100%;
+            /* border: 2px solid black; */
+            z-index: -1;
+            height: 70px;
+        }
+
+        .middle .main .first_name h1 {
+            /* border: 2px solid grey; */
+            margin-top: 0%;
+            text-align: right;
+            font-size: 40px;
+            padding: 5px;
+            /* margin-right: 20px; */
+            font-family: 'Righteous', cursive;
+        }
+
+        .middle .main .font {
+            margin-top: 0%;
+            /* border: 2px solid red; */
+            z-index: -1;
+            padding: 5px;
+            font-size: 20px;
+            text-align: center;
+            word-spacing: 10px;
+            background-color: #cac4c0;
+        }
+
+        .middle .main #picture {
+            /* border: 2px solid rebeccapurple; */
+            z-index: 1;
+            position: relative;
+            margin-left: 50px;
+        }
+
+        .div_three {
+            /* border: 2px solid green; */
+            /* height: 200px; */
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background-color: #1f1f1f;
+            color: whitesmoke;
+            margin: auto;
+        }
+
+        .div_three div {
+            animation: up 2s 1;
+        }
+
+        .div_three .one {
+            /* border: 2px solid tomato; */
+
+        }
+
+        .div_three .one h1 {
+            /* border: 2px solid red; */
+            text-align: center;
+            /* color: #242423; */
+            word-spacing: 5px;
+            padding: 5px;
+            margin-top: 6%;
+        }
+
+        .div_three .one hr {
+            width: 10%;
+            height: 1px;
+            background-color: grey;
+            border: none;
+            filter: drop-shadow(0px 1px 2px grey);
+            margin-top: -20px;
+        }
+
+        .div_three .two {
+            /* border: 2px solid blue; */
+            display: flex;
+            flex: 1;
+            flex-basis: 30%;
+            text-align: center;
+            margin: auto;
+            max-width: 80%;
+
+            /* flex-wrap: wrap; */
+        }
+
+        kbd,
+        .div_three .two .html_css .js .c_plus {
+
+            font-size: 23px;
+        }
+
+        p,
+        .div_three .two .html_css .js .c_plus {
+            font-size: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 5px;
+        }
+
+        .div_three .two .html_css,
+        .js,
+        .c_plus {
+            padding: 5px;
+            text-align: center;
+            margin-right: 3%;
+        }
+
+        .div_three .three {
+            /* border: 2px solid green; */
+            display: flex;
+            margin: auto;
+            width: 20%;
+            margin-bottom: 40px;
+            margin-bottom: 6%;
+        }
+
+        .div_three .three a {
+            margin: auto;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .div_three .three h4 {
+            /* border: 2px solid yellow; */
+            text-align: center;
+            padding: 10px;
+            color: whitesmoke;
+            margin: auto;
+            width: 100%;
+            background-color: #242423;
+            border-radius: 10px;
+        }
+
+        .div_three .three h4:hover {
+            background-color: #3a3a38;
+        }
+
+        .div_four {
+            /* border: 2px solid green; */
+            display: flex;
+            position: relative;
+            margin-top: 2%;
+            max-width: 100%;
+        }
+
+        .div_four div {
+            animation: up 2s 1;
+        }
+
+        .div_four .all {
+            max-width: 80%;
+            display: flex;
+            margin: auto;
+        }
+
+        .div_four .fourth {
+            float: right;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            /* margin-left: -20%; */
+        }
+
+        .div_four .fourth {
+            /* border: 4px solid saddlebrown; */
+            margin-left: -35%;
+        }
+
+        .div_four .special {
+            display: flex;
+            flex-direction: column;
+            /* max-width: 70%; */
+            /* border: 2px solid blue; */
+            max-width: 100%;
+
+        }
+
+        .div_four .special .one {
+            /* border: 2px solid gold; */
+            z-index: -1;
+            max-width: 64%;
+
+        }
+
+        .div_four .special .one h2 {
+            /* border: 2px solid red; */
+            padding: 10px;
+            color: #1a1a18;
+            margin-left: 50px;
+            max-width: 80%;
+            font-family: 'EB Garamond', serif;
+        }
+
+        .div_four .special .two {
+            /* border: 2px solid hotpink; */
+            padding: 10px;
+            color: whitesmoke;
+            max-width: 100%;
+            background-color: #1a1a18;
+            border-radius: 10px;
+
+        }
+
+        .div_four .special .two span kbd {
+            margin-left: 20px;
+            font-family: 'EB Garamond', serif;
+            font-size: 23px;
+        }
+
+        .div_four .special .third {
+            max-width: 64%;
+            /* border: 3px solid red; */
+        }
+
+        .div_four .special .third p {
+            padding: 5px;
+            text-align: justify;
+            color: #11110f;
+        }
+
+        .div_four .special,
+        .fourth {
+            margin-top: 7%;
+            margin-bottom: 7%;
+        }
+
+        .div_five {
+            display: flex;
+            margin: auto;
+            max-width: 100%;
+            /* border: 2px solid green; */
+            position: relative;
+            flex-direction: column;
+        }
+
+        .div_five .pic {
+            /* border: 2px solid blue; */
+            display: flex;
+            margin: auto;
+            position: relative;
+            flex-wrap: wrap;
+            /* flex-direction: column; */
+            width: 80%;
+
+        }
+
+        .div_five .pic div {
+            /* border: 2px solid #1f1f1f; */
+            /* margin: auto; */
+            flex-basis: 30%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+
+            /* height: 100px; */
+        }
+
+        .div_five .pic .one {
+
+            background-image: url('coding-924920_1920 (1).jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .div_five .pic .two {
+
+            background-image: url('laptop-1839876_1920.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .div_five .pic .three {
+
+            background-image: url('pexels-luis-gomes-546819.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .div_five .pic .four {
+
+            background-image: url('pexels-markus-spiske-1089438.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .div_five .pic .five {
+
+            background-image: url('pexels-markus-spiske-2061168.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .div_five .pic .six {
+
+            background-image: url('pexels-tima-miroshnichenko-5380649.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .div_five .pic h4 {
+            text-align: center;
+            padding: 5px;
+            font-size: 20px;
+            filter: drop-shadow(.6px .6px .4px #3a3a38);
+            visibility: hidden;
+        }
+
+        .div_five .pic p {
+            text-align: center;
+            padding: 10px;
+            color: #1a1a18;
+            font-size: 20px;
+            visibility: hidden;
+        }
+
+        .div_five .pic div:hover h4 {
+            display: block;
+            visibility: inherit;
+            color: whitesmoke;
+            background-color: rgba(36, 33, 33, 0.7);
+
+        }
+
+        .div_five .pic div:hover p {
+            display: block;
+            visibility: inherit;
+            color: whitesmoke;
+            background-color: rgba(36, 33, 33, 0.4);
+            
+        }
+        .div_five .up_side{
+            /* border:  2px solid red; */
+            text-align: center;
+
+        }
+        .div_five .up_side p{
+           margin-top: -2%;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="one">
-        <div class="final">
-            <h2>Sign Up</h2>
-            <div class="two">
-                <input type="text" name="user_name" placeholder="User name"> <br>
-                <input type="email" name="email" placeholder="Email" id=""> <br>
-                <input type="passwd" placeholder="Password" required pattern="[0-9 a-z A-Z]">
-            </div>
+    <div class="first_one">
 
-            <input type="submit" value="Sign Up">
+
+        <div class="header">
+            <div class="logo">
+                <img src="LogoMakr-6LAXSj.png" alt="" width="35px">
+            </div>
+            <div class="search">
+                <input type="search" name="ARAFAT" id="search_">
+                <input type="button" value="Search" id="button">
+            </div>
+            <div class="menu">
+                <i class="fas fa-bars" id="hello"></i>
+                <div class="list">
+                    <ul>
+                        <li> <a href="#">ABOUT</a></li>
+                        <li> <a href="#">HOME</a></li>
+                        <li> <a href="#">PROJECTS</a></li>
+                        <li> <a href="#">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="main">
+            <img src="DXia8UBV4AEg_ap.jfif" alt="MY_PICTURE" width="120px" height="160px" id="picture">
+            <div class="introduce">
+                <p>Hi, I am</p>
+            </div>
+            <div class="first_name">
+                <h1>MOHI UDDIN</h1>
+            </div>
+            <p class="font">FRONT-END DEV</p>
+        </div>
+    </div>
+    <div class="div_three">
+        <div class="one">
+            <h1>WHAT I DO</h1>
+            <hr>
+        </div>
+        <div class="two">
+            <div class="js">
+                <span><kbd class="is">Java-Script</kbd></span>
+                <p>
+                    Et duo elitr gubergren sed sadipscing gubergren lorem gubergren et et, sanctus accusam tempor dolor
+                    erat, no et sed sed gubergren sanctus ipsum eirmod clita. Accusam sit vero diam stet diam eos eos,
+                    sadipscing et erat ipsum sed voluptua aliquyam.
+                </p>
+            </div>
+            <div class="c_plus">
+                <span><kbd class="is">C/C++</kbd></span>
+                <p>
+                    Et duo elitr gubergren sed sadipscing gubergren lorem gubergren et et, sanctus accusam tempor dolor
+                    erat, no et sed sed gubergren sanctus ipsum eirmod clita. Accusam sit vero diam stet diam eos eos,
+                    sadipscing et erat ipsum sed voluptua aliquyam.
+                </p>
+            </div>
+            <div class="html_css">
+                <span><kbd class="is">HTML-CSS</kbd></span>
+                <p>
+                    Et duo elitr gubergren sed sadipscing gubergren lorem gubergren et et, sanctus accusam tempor dolor
+                    erat, no et sed sed gubergren sanctus ipsum eirmod clita. Accusam sit vero diam stet diam eos eos,
+                    sadipscing et erat ipsum sed voluptua aliquyam.
+                </p>
+            </div>
         </div>
         <div class="three">
-            <h2>Login</h2>
-            <div class="four">
-                <br>
-                <input type="text">
-                <br>
-                <br>
-                <input type="passwd">
-                <input type="submit" value="Login">
-            </div>
+            <a href="#">
+                <h4>See My Work</h4>
+            </a>
 
         </div>
     </div>
+    <div class="div_four">
+        <div class="all">
+
+
+            <div class="special">
+                <div class="one">
+                    <h2>Who I Am</h2>
+                </div>
+                <div class="two">
+                    <span><kbd>Font-end & problem solving With Js/C++</kbd></span>
+                </div>
+                <div class="third">
+                    <p>
+                        Et nonumy sed voluptua dolores no. Dolores at elitr no tempor, amet labore sanctus kasd
+                        consetetur
+                        accusam diam labore sit. Duo eirmod dolore lorem dolor sanctus lorem. Clita clita lorem ipsum
+                        sit
+                        accusam, elitr invidunt takimata consetetur et, sadipscing sit rebum aliquyam ea. Diam lorem
+                        ipsum
+                        et
+                        sea. Ipsum dolore aliquyam invidunt no sanctus lorem sed, eirmod sadipscing sanctus erat.
+                    </p>
+                </div>
+            </div>
+            <div class="fourth">
+                <img src="WhatsApp Image 2021-11-28 at 10.49.59 PM.jpeg" alt="MY_PICTURE" width="200px" height="250px">
+            </div>
+        </div>
+    </div>
+    <div class="div_five">
+        <div class="up_side">
+            <h2>My Work</h2>
+            <p>A section of my range of work</p>
+        </div>
+        <div class="pic">
+
+            <div class="one">
+                <h4> <kbd> Java Script</kbd></h4>
+                <p>
+                    I have not yet made any project on Js.but
+                    I believe I will make It Soon.
+                </p>
+            </div>
+            <div class="two">
+                <h4> <kbd>C Language</kbd></h4>
+                <p>
+                    I have practice during my first and second semester C language. I am enough confident about C.
+                </p>
+            </div>
+            <div class="three">
+                <h4> <kbd>C++</kbd></h4>
+                <p>
+                    I have practice during my first and second semester C++ language. I am enough confident about C++.
+                </p>
+            </div>
+            <div class="four">
+                <h4> <kbd>HTML-CSS</kbd></h4>
+                <p>
+                    I am trying my best to be good on HTML-CSS.
+                    because I love to do and it could make my future as well.
+                </p>
+            </div>
+            <div class="five">
+                <h4> <kbd>SQL</kbd></h4>
+                <p>
+                    I have basic knowledge about SQL.
+                    Although I know, I have to understand more than now.
+                </p>
+            </div>
+            <div class="six">
+                <h4> <kbd>Python</kbd></h4>
+                <p>
+                    I have basic knowledge about Python.
+                    Although I know, I have to understand more than now.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 
 </html>
